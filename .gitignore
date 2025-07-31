@@ -1,0 +1,11 @@
+*.class
+
+*.iml
+
+logs/
+dc_logs/
+
+.idea/
+
+.gradle/
+build/

@@ -1,0 +1,10 @@
+services:
+  java-dev-examples:
+    image: java-dev-examples
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./dc_logs:/opt/app/logs"
+    environment:
+      - TZ=Asia/Shanghai
+      - JAVA_OPTIONS=-Xms256m -Xmx256m
