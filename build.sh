@@ -10,7 +10,7 @@ log_info "step 1" "gradle build"
 
 bash <(curl -sSL "$ROOT_URI/gradle/build.sh") \
   -c "gradle-cache" \
-  -i "gradle:8.8-jdk17" \
+  -i "gradle:8.14-jdk17" \
   -x "gradle clean build -x test --info"
 
 jar_name="dev-biz-1.0.0-SNAPSHOT.jar"
@@ -29,6 +29,6 @@ timestamp_tag=$(date '+%Y-%m-%d_%H-%M-%S')
 bash <(curl -sSL "$ROOT_URI/docker/build.sh") \
   -i "java-dev-examples" \
   -v "latest" \
-  -r "true" \
+  -r "false" \
   -t "$timestamp_tag" \
   -p "false"
